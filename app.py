@@ -1,7 +1,7 @@
 import streamlit as st
 
 def main():
-    st.iframe("https://www.google.com/")
+    st.components.v1.iframe("https://www.google.com/")
 
 if __name__ == "__main__":
     main()
