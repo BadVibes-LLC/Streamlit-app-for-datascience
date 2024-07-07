@@ -3,7 +3,7 @@ import streamlit as st
 
 html = ""
 with open("/pages/test.html","r") as f:
-    html = f
+    html = f.read()
 
 def main():
     st.components.v1.html(html)
