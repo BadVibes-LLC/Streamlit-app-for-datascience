@@ -1,10 +1,12 @@
 import streamlit as st
 
 
-html = "pages/test.html"
+html = ""
+with open("/pages/test.html","r") as f:
+    html = f
 
 def main():
-    st.html(html)
+    st.components.v1.html(html)
     st.write("Testing page")
 
 if __name__ == "__main__":
