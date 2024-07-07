@@ -7,7 +7,7 @@ html = '''
 '''
 
 def main():
-    st.components.v1.html(html)
+    st.html(html)
 
 if __name__ == "__main__":
     main()
