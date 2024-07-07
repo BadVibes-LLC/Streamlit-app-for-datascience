@@ -6,6 +6,7 @@ with open("/pages/test.html","r") as f:
     html = f.read()
 
 def main():
+    st.write(html)
     st.components.v1.html(html)
     st.write("Testing page")
 
