@@ -3,10 +3,9 @@ import streamlit as st
 def main():
     st.html('''
     <html>
-    <head>
-    <meta name="google-adsense-account" content="ca-pub-9369193555413965">
-    </head>
-    </html>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9369193555413965"
+     crossorigin="anonymous"></script>
+     </html>
     ''')
     st.write("Testing page")
 
