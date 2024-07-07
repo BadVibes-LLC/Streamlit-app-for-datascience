@@ -1,9 +1,7 @@
 import streamlit as st
 
 
-html = '''
-<meta name="google-adsense-account" content="ca-pub-9369193555413965">
-'''
+html = "pages/test.html"
 
 def main():
     st.html(html)
