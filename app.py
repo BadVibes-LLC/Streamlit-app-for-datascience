@@ -1,7 +1,7 @@
 import streamlit as st
 
 def main():
-    st.components.v1.html('''
+    st.html('''
     <html>
     <head>
     <meta name="google-adsense-account" content="ca-pub-9369193555413965">
