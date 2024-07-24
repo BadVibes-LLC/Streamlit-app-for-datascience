@@ -5,8 +5,6 @@ client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 
 def main():
-
-
   st.title("Generative AI Example using OpenAI and LangChain")
   input = st.text_input("Ask me anything!", key="input")
 
@@ -24,5 +22,5 @@ def main():
       if response.choices[0].delta.content is not None:
         st.write_stream(response.choices[0].delta.content, end="")
 
-if __name__ == '__Main__':
+if __name__ == "__main__":
   main()
