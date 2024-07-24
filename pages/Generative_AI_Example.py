@@ -18,9 +18,7 @@ def main():
       stream=True
     )
 
-    for response in stream:
-      if response.choices[0].delta.content is not None:
-        st.write_stream(response.choices[0].delta.content)
+    st.write_stream(stream=stream, key="output")
 
 if __name__ == "__main__":
   main()
