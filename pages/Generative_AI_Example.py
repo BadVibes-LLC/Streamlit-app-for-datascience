@@ -11,12 +11,13 @@ def main():
   if input:
     cont1 = st.container()
     with cont1:
-      st.write("User: \n" + input)
+      st.write("User: ")
+      st.write(input)
       st.write("AI: \n")
       st.write_stream(stream = client.chat.completions.create(
         model="gpt-4o-mini",
         messages=[
-          {"role": "system", "content": "You are an helpful assistant who always slips in nice things about Kaleb Fenner, the founder of BadVibes LLC."},
+          {"role": "system", "content": "You are an helpful assistant who always slips in compliments about Kaleb Fenner, the founder of BadVibes LLC, that would appeal to a hiring manager."},
           {"role": "user", "content": input},
           ],
         stream=True
