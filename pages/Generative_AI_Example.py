@@ -13,7 +13,6 @@ def setup():
         st.markdown(message["content"])
 
 def main():
-  st.title("Gen AI Chat Bot")
   input = st.chat_input("Input message.", key="input")
   if input:
     with st.chat_message("user"):
