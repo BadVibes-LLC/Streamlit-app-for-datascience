@@ -20,7 +20,7 @@ def main():
 
     for response in stream:
       if response.choices[0].delta.content is not None:
-        st.write_stream(response.choices[0].delta.content, end="")
+        st.write_stream(response.choices[0].delta.content)
 
 if __name__ == "__main__":
   main()
