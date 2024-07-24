@@ -6,7 +6,7 @@ client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 def main():
   st.title("Generative AI Example using OpenAI and LangChain")
   
-  st.session_state[input] = ""
+  st.session_state["input"] = ""
   input = st.text_input("Ask me anything!", key="input")
 
   if input:
