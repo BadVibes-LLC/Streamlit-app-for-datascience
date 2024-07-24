@@ -6,7 +6,7 @@ def train():
 
 def main():
     st.title('BadVibes LLC AI Showcase')
-    st.write("This is the AI showcase of BadVibes LLC developed by Kaleb Fenner.")
+    st.write("This is a showcase of Kaleb Fenner's python skills in generative AI and machine learning.")
 
 if __name__ == '__main__':
     main()

@@ -4,7 +4,7 @@ from openai import OpenAI
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 def main():
-  st.title("Generative AI Example using OpenAI")
+  st.title("Gen AI using OpenAI")
   
   input = st.text_input("Input message below.", key="input")
 
