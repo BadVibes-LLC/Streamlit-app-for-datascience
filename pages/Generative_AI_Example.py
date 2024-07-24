@@ -1,18 +1,18 @@
 import streamlit as st
 from openai import OpenAI
+import streamlit_chat
 
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 def main():
   st.title("Gen AI Chat Bot")
-  input = st.text_input("Input message below.", key="input")
-  send = st.button("Submit")
-  if input or send:
-    cont1 = st.container()
-    with cont1:
-      st.write("User: ")
+  input = st.chat_input("Input message.", key="input")
+  cont1 = st.container()
+  with cont1:
+    with st.chat_message("user"):
+      if input == None: return
       st.write(input)
-      st.write("AI: \n")
+    with st.chat_message("AI"):
       st.write_stream(stream = client.chat.completions.create(
         model="gpt-4o-mini",
         messages=[
