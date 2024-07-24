@@ -10,15 +10,18 @@ def main():
   input = st.text_input("Ask me anything!", key="input")
 
   if input:
-    st.session_state["input"] = ""
-    st.write_stream(stream = client.chat.completions.create(
-      model="gpt-4o-mini",
-      messages=[
-        {"role": "system", "content": "You are an helpful assistant."},
-        {"role": "user", "content": input},
-        ],
-      stream=True
-    ))
+    cont1 = st.container()
+    with cont1:
+      st.write("User: " + input)
+      st.write_stream(stream = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+          {"role": "system", "content": "You are an helpful assistant."},
+          {"role": "user", "content": input},
+          ],
+        stream=True
+      ))
+      st.session_state["input"] = ""
 
 if __name__ == "__main__":
   main()
