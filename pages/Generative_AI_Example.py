@@ -4,11 +4,11 @@ from openai import OpenAI
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 def main():
-  st.title("Gen AI using OpenAI")
+  st.title("Gen AI Chat Bot")
   
   input = st.text_input("Input message below.", key="input")
-
-  if input:
+  send = st.button("Submit")
+  if input or send:
     cont1 = st.container()
     with cont1:
       st.write("User: ")
