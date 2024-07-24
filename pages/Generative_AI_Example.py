@@ -3,6 +3,13 @@ from openai import OpenAI
 
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
+def process_stream(stream):
+  for response in stream:
+    content = response["choices"][0]["delta"].get("content")
+  if content:
+    return content
+  else:
+    return ""
 
 def main():
   st.title("Generative AI Example using OpenAI and LangChain")
@@ -18,7 +25,7 @@ def main():
       stream=True
     )
 
-    st.write_stream(stream=stream, key="output")
+    st.write_stream(process_stream(stream))
 
 if __name__ == "__main__":
   main()
