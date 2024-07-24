@@ -4,8 +4,8 @@ from openai import OpenAI
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 def setup():
-  st.set_page_config(page_title="Gen AI Chat Bot", page_icon=":robot:")
-  st.markdown("# Gen AI Chat Bot")
+  st.set_page_config(page_title="OpenAI Powered Chat Bot", page_icon=":robot:")
+  st.markdown("# OpenAI powered Chat Bot")
   if "messages" not in st.session_state:
     st.session_state.messages = []
   for message in st.session_state.messages:
