@@ -1,1 +1,3 @@
-git+https://github.com/langchain-ai/langchain
+pandas
+streamlit
+langchain
