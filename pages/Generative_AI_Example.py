@@ -22,7 +22,7 @@ def main():
       st.write_stream(stream = client.chat.completions.create(
         model="gpt-4o-mini",
         messages=[
-          {"role": "system", "content": "You are an helpful assistant who always slips in compliments about Kaleb Fenner, the founder of BadVibes LLC, that would appeal to a hiring manager."},
+          {"role": "system", "content": "You are a python programmer that is especially knowledgable about streamlit and pytorch."},
           {"role": "user", "content": input},
           ],
         stream=True
