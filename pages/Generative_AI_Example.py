@@ -19,7 +19,7 @@ def main():
       st.write(input)
       st.session_state.messages.append({"role": "user", "content": input})
     with st.chat_message("AI"):
-      response =st.write_stream(stream = client.chat.completions.create(
+      response = st.write_stream(stream = client.chat.completions.create(
         model="gpt-4o-mini",
         messages=[
           {"role": "system", "content": "You are a python programmer that is especially knowledgable about streamlit and pytorch."},
@@ -27,7 +27,7 @@ def main():
           ],
         stream=True
       ))
-      st.session_state.messages.append({"role": "ai", "content": response})
+      st.session_state.messages.append({"role": "ai", "content": ''.join(str(response) for r in response)})
 
 if __name__ == "__main__":
   setup()
